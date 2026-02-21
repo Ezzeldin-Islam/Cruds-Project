@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4d00a5;
+  transition: 0.4s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #370076;
+}
+
+:root {
+  --back-c: #222;
+  --input-c: #000;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  background-color: var(--back-c);
+  color: white;
+}
+
+.cruds {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.cruds .head {
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  background: #111;
+  margin: 10px 0;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  color: white;
+  transition: 0.3s;
+}
+input::placeholder {
+  transition: 0.3s;
+}
+input:focus::placeholder {
+  opacity: 0;
+  transform: scale(1.1);
+}
+input:focus {
+  transform: scale(1.1);
+  background: black;
+}
+#search:focus::placeholder {
+  opacity: 1;
+  margin-left: 10px;
+  scale: 0.9;
+}
+
+.cruds .create .prices {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cruds .create .prices #total {
+  background-color: rgb(90, 1, 1);
+  padding: 10px 4px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.cruds .create .prices #total::before {
+  content: "Total: ";
+}
+
+.cruds .create #create {
+  width: 100%;
+  border-radius: 8px;
+  margin-left: 4px;
+  border: none;
+  outline: none;
+  background-color: rgb(55, 0, 103);
+  color: white;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cruds .create #create:hover {
+  letter-spacing: 1px;
+  background-color: rgb(77, 0, 145);
+}
+
+.cruds .search-and-read .searchBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  width: 100%;
+  margin-left: 10px;
+}
+.cruds .search-and-read .searchBtns #search-title,
+#search-category {
+  background-color: rgb(55, 0, 103);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-basis: 40%;
+  margin-bottom: 20px;
+}
+.cruds .search-and-read .searchBtns #search-title:hover {
+  letter-spacing: 1px;
+  background-color: rgb(77, 0, 145);
+}
+.cruds .search-and-read .searchBtns #search-category:hover {
+  letter-spacing: 1px;
+  background-color: rgb(77, 0, 145);
+}
+
+.cruds .search-and-read .over-x {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+.cruds .search-and-read .over-x table {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+th,
+td {
+  margin: 8px;
+  padding: 5px;
+  text-align: center;
+  border-top: 1px solid rgb(100, 100, 100);
+}
+tr {
+  margin: 10px;
+  padding: 10px;
+}
+
+th {
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+#deleteAll > button {
+  width: 100%;
+  border-radius: 7px;
+  background-color: rgb(55, 0, 103);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 7px;
+  margin-left: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#deleteAll > button:hover {
+  background-color: rgb(77, 0, 145);
+  transform: scale(1.1);
+}
+
+.update,
+.delete {
+  background-color: rgb(55, 0, 103);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.delete {
+  background-color: rgb(91, 19, 19);
+}
+.delete:hover {
+  background-color: rgb(117, 26, 26);
+  transform: scale(1.1);
+}
+.update:hover {
+  background-color: rgb(77, 0, 145);
+  transform: scale(1.1);
+}
